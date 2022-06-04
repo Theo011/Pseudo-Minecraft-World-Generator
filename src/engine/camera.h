@@ -21,7 +21,7 @@ const float YAW = -90.0f;
 const float PITCH = 0.0f;
 const float SPEED = 12.5f;
 const float SENSITIVITY = 0.2f;
-const float ZOOM = 45.0f;
+const float ZOOM = 70.0f;
 
 // An abstract camera class that processes input and calculates the corresponding Euler Angles, Vectors and Matrices for use in OpenGL
 class Camera

@@ -2,8 +2,8 @@
 
 #include <vector>
 
-#include "../util/camera.h"
-#include "../util/shader.h"
+#include "../engine/camera.h"
+#include "../engine/shader.h"
 
 class World
 {

@@ -18,7 +18,7 @@
     <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\util\shader.cpp">
+    <ClCompile Include="src\engine\shader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\world\world.cpp">
@@ -53,10 +53,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\util\camera.h">
+    <ClInclude Include="src\engine\camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\util\shader.h">
+    <ClInclude Include="src\engine\shader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\world\blocks\bedrock.h">

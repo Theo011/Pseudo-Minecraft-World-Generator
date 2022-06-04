@@ -175,7 +175,7 @@
     <ClCompile Include="dependecies\include\imgui\imgui_widgets.cpp" />
     <ClCompile Include="src\glad.c" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\util\shader.cpp" />
+    <ClCompile Include="src\engine\shader.cpp" />
     <ClCompile Include="src\world\world.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -559,8 +559,8 @@
     <ClInclude Include="dependecies\include\imgui\imstb_truetype.h" />
     <ClInclude Include="dependecies\include\KHR\khrplatform.h" />
     <ClInclude Include="dependecies\include\stb_image.h" />
-    <ClInclude Include="src\util\camera.h" />
-    <ClInclude Include="src\util\shader.h" />
+    <ClInclude Include="src\engine\camera.h" />
+    <ClInclude Include="src\engine\shader.h" />
     <ClInclude Include="src\world\blocks\bedrock.h" />
     <ClInclude Include="src\world\blocks\blocks.h" />
     <ClInclude Include="src\world\blocks\dirt.h" />
