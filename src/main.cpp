@@ -102,7 +102,7 @@ bool capture_mouse = true;
 
 int main()
 {
-    // glfw: initialize and configure
+// glfw: initialize and configure
 #ifdef _DEBUG
     glfwSetErrorCallback(glfw_error_callback);
 #endif
@@ -175,8 +175,11 @@ int main()
     // clockwise face culling
     glFrontFace(GL_CW);
 
-    // print OpenGL version
-    std::cout << glGetString(GL_VERSION) << std::endl;
+#ifdef _DEBUG
+	std::cout << "Working Directory : " << WORKING_DIRECTORY << std::endl;
+    std::cout << "OpenGL Version : " << glGetString(GL_VERSION) << std::endl;
+	std::cout << "GLSL Version : " << glGetString(GL_SHADING_LANGUAGE_VERSION) << std::endl;
+#endif
 
     // vsync
     glfwSwapInterval(1);

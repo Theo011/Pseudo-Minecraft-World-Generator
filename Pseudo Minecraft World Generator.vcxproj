@@ -98,7 +98,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WORKING_DIRECTORY=R"($(ProjectDir))";WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
@@ -115,7 +115,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WORKING_DIRECTORY=R"($(ProjectDir))";WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
@@ -133,7 +133,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WORKING_DIRECTORY=R"($(ProjectDir))";_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
@@ -150,7 +150,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WORKING_DIRECTORY=R"($(ProjectDir))";NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
@@ -196,6 +196,7 @@
     <ClInclude Include="dependecies\include\assimp\Compiler\poppack1.h" />
     <ClInclude Include="dependecies\include\assimp\Compiler\pstdint.h" />
     <ClInclude Include="dependecies\include\assimp\Compiler\pushpack1.h" />
+    <ClInclude Include="dependecies\include\assimp\config.h" />
     <ClInclude Include="dependecies\include\assimp\CreateAnimMesh.h" />
     <ClInclude Include="dependecies\include\assimp\DefaultIOStream.h" />
     <ClInclude Include="dependecies\include\assimp\DefaultIOSystem.h" />
@@ -236,6 +237,7 @@
     <ClInclude Include="dependecies\include\assimp\qnan.h" />
     <ClInclude Include="dependecies\include\assimp\quaternion.h" />
     <ClInclude Include="dependecies\include\assimp\RemoveComments.h" />
+    <ClInclude Include="dependecies\include\assimp\revision.h" />
     <ClInclude Include="dependecies\include\assimp\scene.h" />
     <ClInclude Include="dependecies\include\assimp\SceneCombiner.h" />
     <ClInclude Include="dependecies\include\assimp\SGSpatialSort.h" />
