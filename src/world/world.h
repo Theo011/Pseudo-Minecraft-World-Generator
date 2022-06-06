@@ -16,6 +16,9 @@ enum Blocks
 
 class World
 {
+public:
+	int individual_cubes;
+
 private:
 	int m_seed;
 	int m_x_max;

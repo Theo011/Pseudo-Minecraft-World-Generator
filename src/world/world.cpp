@@ -38,7 +38,7 @@ void World::render_world(Camera& camera, const glm::mat4& projection)
 	m_general_block_shader.setMat4("view", camera.GetViewMatrix());
 	m_general_block_shader.setVec3("viewPos", camera.Position);
 	m_general_block_shader.setVec3("light.direction", -0.2f, -1.0f, -0.3f);
-	m_general_block_shader.setVec3("light.ambient", 0.2f, 0.2f, 0.2f);
+	m_general_block_shader.setVec3("light.ambient", 0.3f, 0.3f, 0.3f);
 	m_general_block_shader.setVec3("light.diffuse", 0.5f, 0.5f, 0.5f);
 	
 	glActiveTexture(GL_TEXTURE0);
@@ -91,7 +91,7 @@ void World::load_noise()
 {
 	FastNoiseLite noise;
 	
-	noise.SetNoiseType(FastNoiseLite::NoiseType_OpenSimplex2);
+	noise.SetNoiseType(FastNoiseLite::NoiseType_Perlin);
 	noise.SetFrequency(0.01f);
 	noise.SetSeed(m_seed);
 	noise.SetFractalOctaves(5);
@@ -106,6 +106,7 @@ void World::load_noise()
 			m_noiseData[x][z] = round(map_value(m_noiseData[x][z], -1.0f, 1.0f, 1.0f, m_y_max));
 			++m_grass_amount;
 			++m_bedrock_amount;
+			individual_cubes += 2;
 		}
 	}
 }
@@ -297,9 +298,15 @@ void World::calculate_blocks()
 			while (h > 0)
 			{
 				if (y - h <= 8)
+				{
 					++m_dirt_amount;
+					++individual_cubes;
+				}
 				else
+				{
 					++m_stone_amount;
+					++individual_cubes;
+				}
 
 				--h;
 			}
