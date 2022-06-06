@@ -89,7 +89,7 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 void processInput(GLFWwindow* window);
 
 // camera
-Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
+Camera camera(glm::vec3(0.0f, 160.0f, 3.0f));
 float lastX;
 float lastY;
 bool firstMouse = true;
@@ -172,7 +172,7 @@ int main()
     // msaa
     glEnable(GL_MULTISAMPLE);
     // face culling
-    //glEnable(GL_CULL_FACE);
+    glEnable(GL_CULL_FACE);
     // clockwise face culling
     //glFrontFace(GL_CW);
 
@@ -205,7 +205,7 @@ int main()
 	
     int seed = rand();
     //          seed  x    z    y
-    World world(seed, 256, 256, 30);
+    World world(seed, 256, 256, 256);
 
     // render loop
     while (!glfwWindowShouldClose(window))
@@ -231,8 +231,8 @@ int main()
         // render
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-        glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)mode->width / (float)mode->height, 0.1f, 1000.0f);
+                                                                                                                        // camera distance
+        glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)mode->width / (float)mode->height, 0.1f, 100000.0f);
 
         // render world
         world.render_world(camera, projection);

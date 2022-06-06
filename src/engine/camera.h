@@ -18,9 +18,9 @@ enum Camera_Movement
 };
 
 // Default camera values
-const float YAW = -90.0f;
+const float YAW = 45.0f;
 const float PITCH = 0.0f;
-const float SPEED = 15.0f;
+const float SPEED = 40.0f;
 const float SENSITIVITY = 0.2f;
 const float ZOOM = 70.0f; // FOV
 
