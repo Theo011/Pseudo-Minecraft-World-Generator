@@ -716,4 +716,7 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <Target Name="AfterBuild">
+    <Copy SourceFiles="$(ProjectDir)dependecies\lib\assimp-vc143-mtd.dll" DestinationFolder="$(OutDir)" SkipUnchangedFiles="false" />
+   </Target>
 </Project>
