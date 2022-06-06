@@ -262,7 +262,7 @@ int main()
     glEnableVertexAttribArray(0);
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 	// skybox texture
-    std::vector<std::string> faces
+    /*std::vector<std::string> faces
     {
         FileSystem::getPath("assets/skybox/right.jpg"),
 		FileSystem::getPath("assets/skybox/left.jpg"),
@@ -270,6 +270,15 @@ int main()
 		FileSystem::getPath("assets/skybox/bottom.jpg"),
 		FileSystem::getPath("assets/skybox/front.jpg"),
 		FileSystem::getPath("assets/skybox/back.jpg")
+    };*/
+    std::vector<std::string> faces
+    {
+        FileSystem::getPath("assets/skybox/right.bmp"),
+        FileSystem::getPath("assets/skybox/left.bmp"),
+        FileSystem::getPath("assets/skybox/top.bmp"),
+        FileSystem::getPath("assets/skybox/bottom.bmp"),
+        FileSystem::getPath("assets/skybox/front.bmp"),
+        FileSystem::getPath("assets/skybox/back.bmp")
     };
 	unsigned int skybox_texture = loadCubemap(faces);
 	// skybox shader configuration
