@@ -205,7 +205,7 @@ int main()
 	
     int seed = rand();
     //          seed  x    z    y
-    World world(seed, 256, 256, 256);
+    World world(seed, 256, 256, 64);
 
     // render loop
     while (!glfwWindowShouldClose(window))
