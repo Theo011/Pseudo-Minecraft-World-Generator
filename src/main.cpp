@@ -1,14 +1,13 @@
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
+#include <ctime>
 
 #include <imgui/imgui.h>
 #include <imgui/imgui_impl_glfw.h>
 #include <imgui/imgui_impl_opengl3.h>
 
 #include "world/world.h"
-#include "engine/model.h"
-#include "engine/filesystem.h"
 
 #include <GLFW/glfw3.h>
 
@@ -175,7 +174,7 @@ int main()
     // face culling
     //glEnable(GL_CULL_FACE);
     // clockwise face culling
-    glFrontFace(GL_CW);
+    //glFrontFace(GL_CW);
 
 #ifdef _DEBUG
 	std::cout << "Working Directory : " << WORKING_DIRECTORY << std::endl;
@@ -202,16 +201,11 @@ int main()
     ImGui_ImplOpenGL3_Init("#version 460");
     //ImGui_ImplOpenGL3_Init((char*)glGetString(GL_NUM_SHADING_LANGUAGE_VERSIONS));
 
-    int seed = 200;
-    //          seed  x    z    y
-    World world(seed, 128, 128, 30);
-
+    srand(time(0));
 	
-	// 3d model test
-    Shader test_shader("assets/shaders/test_vert.glsl", "assets/shaders/test_frag.glsl");
-    Model test_model(FileSystem::getPath("assets/models/dirt/dirt.obj"));
-	//
-
+    int seed = rand();
+    //          seed  x    z    y
+    World world(seed, 256, 256, 30);
 
     // render loop
     while (!glfwWindowShouldClose(window))
@@ -239,23 +233,6 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)mode->width / (float)mode->height, 0.1f, 1000.0f);
-		
-		
-		// 3d model test
-		test_shader.use();
-		test_shader.setMat4("projection", projection);
-		test_shader.setMat4("view", camera.GetViewMatrix());
-        glm::mat4 model = glm::mat4(1.0f);
-        model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f)); // translate it down so it's at the center of the scene
-        model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));	// it's a bit too big for our scene, so scale it down
-        test_shader.setMat4("model", model);
-		test_shader.setVec3("viewPos", camera.Position);
-        test_shader.setVec3("light.direction", -0.2f, -1.0f, -0.3f);
-        test_shader.setVec3("light.ambient", 0.2f, 0.2f, 0.2f);
-        test_shader.setVec3("light.diffuse", 0.5f, 0.5f, 0.5f);
-		test_model.Draw(test_shader);
-		//
-
 
         // render world
         world.render_world(camera, projection);

@@ -18,7 +18,7 @@
 #include "mesh.h"
 #include "shader.h"
 
-unsigned int TextureFromFile(const char* path, const std::string& directory, const bool& gamma = false);
+inline unsigned int TextureFromFile(const char* path, const std::string& directory, const bool& gamma = false);
 
 class Model 
 {
@@ -30,6 +30,8 @@ public:
     bool gammaCorrection;
 
 public:
+    Model() = default;
+
     // constructor, expects a filepath to a 3D model.
     Model(const std::string& path, const bool& gamma = false) : gammaCorrection(gamma)
     {

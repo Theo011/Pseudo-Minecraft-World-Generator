@@ -565,11 +565,6 @@
     <ClInclude Include="src\engine\mesh.h" />
     <ClInclude Include="src\engine\model.h" />
     <ClInclude Include="src\engine\shader.h" />
-    <ClInclude Include="src\world\blocks\bedrock.h" />
-    <ClInclude Include="src\world\blocks\blocks.h" />
-    <ClInclude Include="src\world\blocks\dirt.h" />
-    <ClInclude Include="src\world\blocks\grass.h" />
-    <ClInclude Include="src\world\blocks\stone.h" />
     <ClInclude Include="src\world\world.h" />
   </ItemGroup>
   <ItemGroup>

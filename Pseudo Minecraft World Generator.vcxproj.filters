@@ -56,21 +56,6 @@
     <ClInclude Include="src\engine\shader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\world\blocks\bedrock.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\world\blocks\blocks.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\world\blocks\dirt.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\world\blocks\grass.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\world\blocks\stone.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\world\world.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1220,13 +1205,13 @@
     <ClInclude Include="src\engine\mesh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\engine\model.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="dependecies\include\assimp\config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="dependecies\include\assimp\revision.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\model.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
