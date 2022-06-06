@@ -3,7 +3,7 @@
 #include <string>
 #include <cstdlib>
 
-const char* logl_root = WORKING_DIRECTORY;
+inline const char* logl_root = WORKING_DIRECTORY;
 
 class FileSystem
 {
